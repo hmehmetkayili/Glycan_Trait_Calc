@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glycan-trait-calc"
+version = "1.0.0"
+description = "Automated Glycomic Compositional and Structural Trait Analysis Suite"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Glycomics Research Initiative"}
+]
+keywords = [
+    "glycomics",
+    "glycoproteomics",
+    "glycan traits",
+    "bioinformatics",
+    "mass spectrometry",
+    "analytical chemistry",
+    "glycan calculator"
+]
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "statsmodels>=0.14.0",
+    "openpyxl>=3.1.0",
+    "xlsxwriter>=3.1.0",
+    "reportlab>=4.0.0",
+    "python-multipart>=0.0.6",
+]
+
+[project.scripts]
+glycan-trait-calc = "glycan_trait_calc.cli:main"
+glycan-trait-app = "glycan_trait_calc.app:main"
+glycan-trait-gui = "glycan_trait_calc.desktop_gui:main"
